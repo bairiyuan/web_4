@@ -1,0 +1,126 @@
+/* 基础样式 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #263445;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    padding: 45px 20px 35px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e2e7ed;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+header p, footer {
+    color: #627084;
+    font-size: 14px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 1140px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin: 0 0 22px;
+    font-size: 22px;
+}
+
+/* 三个作品卡片 */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e2e7ed;
+    border-radius: 8px;
+}
+
+.card > a {
+    display: block;
+    border-bottom: 1px solid #e2e7ed;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 20px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+}
+
+.info p {
+    min-height: 78px;
+    margin: 0 0 18px;
+    color: #627084;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    gap: 24px;
+}
+
+.links a {
+    padding: 8px 0;
+    color: #225b9a;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid #225b9a;
+    outline-offset: 3px;
+}
+
+footer {
+    padding: 10px 20px 30px;
+    text-align: center;
+}
+
+/* 手机端改为一列 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .info p {
+        min-height: 0;
+    }
+}
